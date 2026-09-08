@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
@@ -8,6 +8,8 @@ import GeneralContext from "./GeneralContext";
 import "./BuyActionWindow.css";
 
 const BuyActionWindow = ({ uid }) => {
+  
+  const generalContext = useContext(GeneralContext);
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
